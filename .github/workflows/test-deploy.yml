@@ -3,7 +3,6 @@ on: push
 
 jobs: 
   build:
-    needs: test
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repo
@@ -31,7 +30,6 @@ jobs:
 
   deploy:
     needs: test
-
     permissions:
       contents: write
       pages: write     
